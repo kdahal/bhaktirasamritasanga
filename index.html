@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/sw3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="css/Fraonds.css">
 
 <style>
 body {font-family: "Lato", sans-serif}
@@ -50,28 +50,128 @@ background-color: green;
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-  <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src="images/mayapur-01.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <!--<h3>Los Angeles</h3>
-      <p><b>We had the best time playing at Venice Beach!</b></p>  --> 
+<!--HEAD -->
+<header class="w3-display-container w3-center ">
+  <div class="mySlidesone w3-animate-opacity">
+    <!--Video section --> 
+    <div class="video-container">
+  <div id="player" style="width:100%"></div>
+    <div class="pattern"></div>
     </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="images/template.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <!--<h3>New York</h3>
-      <p><b>The atmosphere in New York is lorem ipsum.</b></p>-->    
+  
+    
+   <script>
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {
+            height: '315',
+            width: '100%',
+            videoId: 'c3Acjai-Ttc',
+  playerVars: {
+            'autoplay': 1,
+            'autohide': 1,
+             'wmode': 'opaque',
+              'showinfo': 0,
+              'loop': 1,
+              'mute': 1,
+              color: 'white',
+              playlist: 'c3Acjai-Ttc,E6UOViRjido,zqstpNsnFV0'
+          },
+          events: {
+              'onReady': onPlayerReady
+          }
+      });
+          
+  }
+  
+      function initialize(){
+  
+      // Update the controls on load
+      updateTimerDisplay();
+      updateProgressBar();
+  
+      // Clear any old interval.
+      clearInterval(time_update_interval);
+  
+      // Start interval to update elapsed time display and
+      // the elapsed part of the progress bar every second.
+      time_update_interval = setInterval(function () {
+          updateTimerDisplay();
+          updateProgressBar();
+      }, 1000)
+  
+  }
+    
+   // This function is called by initialize()
+  function updateTimerDisplay(){
+      // Update current time text display.
+      $('#current-time').text(formatTime( player.getCurrentTime() ));
+      $('#duration').text(formatTime( player.getDuration() ));
+  }
+    
+    
+   function onPlayerReady(event) {
+      event.target.mute();
+      event.target.playVideo();
+      //why this? Well, if you want to overlay text on top of your video, you
+      //will have to fade it in once your video has loaded in order for this
+      //to work in Safari, or your will get an origin error.
+  }
+  
+  </script>
+  
+      <div class=" w3-image hidden-xs w3-hide-small"></div>
+      <div class="w3-display-middle w3-text-white">
+      <h1 class=" w3-jumbo w3-animate-top hidden-xs w3-hide-small">WELCOME TO BRAS</h1>
+      <hr class=" w3-border w3-white hidden-xs w3-hide-small" style="margin:auto;width:60%"></hr>
+      <p class="w3-center" style="margin: 5px; font-family:'Arizonia';font-size: 22px;">The Ultimate In Sadhu Sanga</p>
+      <!--<p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Discover More<i class="fa fa-arrow-right w3-margin-left"></i></a></p> --> 
     </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="images/mayapur-03.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <!--<h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p> -->   
     </div>
+  
+  <!--<div class="mySlidesone w3-animate-opacity">
+      <img class="w3-image" src="images/hemp_bag01.jpg" alt="Image 2" style="min-width:200px" width="100%" height="600"/>
+      <div class=" w3-image hidden-xs w3-hide-small"></div>
+      <div class="w3-display-middle w3-text-white">
+      <h1 class=" w3-jumbo w3-animate-top hidden-xs w3-hide-small">NATURE’S GIFTS </h1>
+      <hr class=" w3-border w3-white hidden-xs w3-hide-small" style="margin:auto;width:60%"></hr>
+      <p class="w3-center" style="margin: 5px; font-family:'Arizonia';font-size: 22px;">Strong and Most Durable</p>
+  <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Discover More<i class="fa fa-arrow-right w3-margin-left"></i></a></p>  
   </div>
+    </div>
+    <div class="mySlidesone w3-animate-opacity">
+      <img class="w3-image" src="images/hemp_bag02.jpg" alt="Image 2" style="min-width:400px" width="100%" height="600"/>
+      <div class=" w3-image hidden-xs w3-hide-small"></div>
+      <div class="w3-display-middle w3-text-white">
+      <h1 class=" w3-jumbo w3-animate-top hidden-xs w3-hide-small">HANDMADE DESIGN</h1>
+      <hr class=" w3-border w3-white hidden-xs w3-hide-small" style="margin:auto;width:60%"></hr>
+      <p class="w3-center" style="margin: 5px; font-family:'Arizonia';font-size: 22px;">100% Artisans Creations </p>
+      <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Discover More<i class="fa fa-arrow-right w3-margin-left"></i></a></p>  
+    </div>
+    </div>-->
+    <!--<div class="mySlidesone w3-animate-opacity">
+      <img class="w3-image " src="images/hemp_bag03.jpg" alt="Image 3" style="min-width:400px" width="100%" height="1000"/>
+          <div class=" w3-image hidden-xs w3-hide-small"></div>
+      <div class="w3-display-middle w3-text-white">
+      <h1 class=" w3-jumbo w3-animate-top hidden-xs w3-hide-small">BIODEGRADABLE</h1>
+      <hr class=" w3-border w3-white hidden-xs w3-hide-small" style="margin:auto;width:60%"></hr>
+      <p class="w3-center" style="margin: 5px; font-family:'Arizonia';font-size: 22px;">Natural Organic Hemp Fiber</p>
+      <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Discover More<i class="fa fa-arrow-right w3-margin-left"></i></a></p>  
+    </div>
+    </div>-->
+    
+  
+    <!--<a class=" w3-display-right w3-margin-right w3-hide-small" onclick="plusDivs(1)"><i class="fa fa-angle-right" style="font-size:48px;color:red; cursor:pointer;"></i></a>
+    <a class="w3-button w3-block w3-black w3-hide-large w3-hide-medium" onclick="plusDivs(1)">Take Tour <i class="fa fa-angle-right pull-right"></i></a>-->
+  <div class="w3-block cov"></div>
+  </header>
 
   <!-- The Band Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
