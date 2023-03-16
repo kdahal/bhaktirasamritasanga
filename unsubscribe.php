@@ -1,6 +1,6 @@
 ﻿<?php
 /* Set e-mail recipient */
-$myemail  = "kdahal@visucraft.com, slaxmi@visucraft.com";
+$myemail  = "kumar.dahal@outlook.com";
 $subject = 'Unsubscribe Form';
 
 
