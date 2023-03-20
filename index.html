@@ -181,7 +181,7 @@ background-color: green;
       Bhakti Ras Amrita Sanga is a unique program that provides an opportunity for devotees to deepen their 
       spiritual practice and become more connected to the Krishna Consciousness. Through this program, 
       devotees can learn about the teachings of Krishna Consciousness, receive spiritual guidance, and participate
-       in devotional service activities at the Denver  temple. The program also provides a platform for devotees
+       in devotional service activities. The program also provides a platform for devotees
         to communize with each other and share their experiences in devotional service. By participating in Bhakti Ras
          Amrita Sanga, devotees can gain a deeper understanding of Krishna Consciousness and become more devoted to Sri
           Sri Radha Govinda’s service.  
@@ -311,7 +311,7 @@ background-color: green;
         <i class="fa fa-envelope" style="width:30px"> </i> Email: bhaktirasamritasanga@outlook.com<br>
       </div>
       <div class="w3-col m6">
-        <form action="https://formsubmit.co/bhaktirasamritasanga@outlook.com" method="POST" target="_blank">
+        <form onsubmit="sendEmail(); reset(); return false;">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
               <input class="w3-input w3-border" type="text" placeholder="Name" required name="name">
@@ -327,7 +327,23 @@ background-color: green;
     </div>
   </div>
 
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  function sendEmail(){
+    Email.send({
+    Host : "smtp.gmail.com",
+    Username : "toastmeister@gmail.com",
+    Password : "RamDas@31RamDas@31",
+    To : 'kumar.dahal@outlook.com',
+    From : document.getElementsByID("email").value,
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
 
+  }
+</script>
 
   
 <!-- End Page Content -->
