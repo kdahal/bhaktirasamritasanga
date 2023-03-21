@@ -200,7 +200,7 @@ function submitForm(){
 	formdata.append( "email_one", _("email_one").value );
 	formdata.append( "message_two", _("message_two").value );
 	var ajax = new XMLHttpRequest();
-	ajax.open( "POST", "https://bhaktirasamritasanga.vercel.app/unsubscribe.php" );
+	ajax.open( "POST", "https://storage.googleapis.com/www.bhaktirasamritasanga.com/unsubscribe.php" );
 	ajax.onreadystatechange = function() {
 		if(ajax.readyState == 4 && ajax.status == 200) {
 			if(ajax.responseText == "success"){
