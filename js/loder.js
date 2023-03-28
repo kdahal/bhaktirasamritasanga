@@ -1,0 +1,33 @@
+document.getElementById("myNav").innerHTML =
+
+"<div class='w3-top'>"
+   + "<div class='w3-bar w3-green w3-card' >"
+    + "<a class='w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right' href='javascript:void(0)' onclick='myFunction()' title='Toggle Navigation Menu'><i class='fa fa-bars'></i></a>"
+        + "<a href='index.html' class='w3-bar-item w3-button w3-padding-large'>HOME</a>"
+            + "<a href='#band' class='w3-bar-item w3-button w3-padding-large w3-hide-small'>ABOUT</a>"
+                + "<a href='#tour' class='w3-bar-item w3-button w3-padding-large w3-hide-small'>PROGRAM</a>"
+                    + "<a href='#contact' class='w3-bar-item w3-button w3-padding-large w3-hide-small'>CONTACT</a>"
+                        + "<a href='javascript:void(0)' class='w3-padding-large w3-hover-red w3-hide-small w3-right'><i class='fa fa-search'></i></a>"
+                            + "</div>"
+                                + "</div>"
+                             + "<div id='navDemo' class='w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top' style='margin-top:46px'>"
+                        + "<a href='#band' class='w3-bar-item w3-button w3-padding-large' onclick='myFunction()'>ABOUT</a>"
+                    + "<a href='#tour' class='w3-bar-item w3-button w3-padding-large' onclick='myFunction()'>PROGRAM</a>"
+                + "<a href='#contact' class='w3-bar-item w3-button w3-padding-large' onclick='myFunction()'>CONTACT</a>"
+            + "<!--<a href='#' class='w3-bar-item w3-button w3-padding-large' onclick='myFunction()'>MERCH</a>-->"
+        + "</div>";
+document.getElementById("myFooter").innerHTML =
+	"<footer class='container-fluid bgimg-3 foot_convert'>"
+    + "<div class='w3-xxxlarge w3-padding-24 w3-margi w3-center'>"
+    + "<a target='_blank' href='https://www.facebook.com/profile.php?id=100090705653334'><i class='fa fa-facebook-official w3-hover-text-red' style='font-size:26px; padding:5px;'></i></a>"
+    + "<a target='_blank' href='#'><i class='fa fa-instagram w3-hover-text-green' style='font-size:26px; padding:5px;'></i></a>"
+    + "<a target='_blank' href='#'><i class='fa fa-google-plus w3-hover-text-yellow' style='font-size:26px; padding:5px;'></i></a>"
+    + "<a target='_blank' href='#'><i class='fa fa-pinterest-p w3-hover-text-red' style='font-size:26px; padding:5px;'></i></a>"
+    + "<a target='_blank' href='#'><i class='fa fa-twitter w3-hover-text-black' style='font-size:26px; padding:5px;'></i></a>"
+    + "<a target='_blank' href='#'><i class='fa fa-linkedin w3-hover-text-yellow' style='font-size:26px; padding:5px;'></i></a>"
+    + "<a target='_blank' href='#'><i class='fa fa-reddit w3-hover-text-green' style='font-size:26px; padding:5px;'></i></a>"
+    + "</div>"   
+    + "</footer>"
+    + "<div class='converter'>"
+    + "<p class='middel w3-center'>© " + new Date().getFullYear() + " BHAKTI RAS AMRITA SANGA All rights reserved.</p>"
+    + "</div>";
