@@ -281,7 +281,7 @@ img {vertical-align: middle;}
 /* footer background color or image*/
 .foot_convert {
   position: relative;
-  height: 100%;
+  height: 20%;
   background-color: #66ccff; /* For browsers that do not support gradients */
   background-image: url("ssl/image-V2/sun.jpg");
     clip-path: polygon(
