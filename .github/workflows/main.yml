@@ -1,6 +1,8 @@
 name: Super-Linter
 
-on: push
+on:
+  push:
+    branches: [ "main" ]
 
 jobs:
   super-lint:
